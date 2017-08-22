@@ -1,0 +1,85 @@
+<link rel="import" href="../polymer/polymer-element.html">
+
+<dom-module id="adwords-mockup">
+  <template>
+    <style>
+       :host {
+        display: block;
+      }
+
+      span {
+        border-radius: 2px;
+        border: 1px solid #006621;
+        color: #006621;
+        display: inline-block;
+        font-size: 12px;
+        line-height: 14px;
+        margin-left: 0;
+        margin-right: 2px;
+        padding: 0 2px;
+        vertical-align: baseline;
+      }
+
+      a {
+        color: #006621;
+        text-decoration: none;
+      }
+
+      h2 {
+        font-size: 18px;
+        line-height: 18px;
+        color: #1a0dab;
+        margin: 0;
+        font-weight: normal;
+      }
+      p{
+        line-height: 18px;
+        font-size: 13px;
+        color:#545454;
+        margin: 0;
+      }
+    </style>
+    <h2>[[headlineOne]] - [[headlineTwo]]</h2>
+    <span>Ad</span> <a href="[[link]]">[[link]]</a>
+    <p>[[description]]</p>
+
+  </template>
+
+  <script>
+    /**
+     * `adwords-mockup`
+     * This is a Polymer 2 element used to mock-up adwords text ads.
+     *
+     * @customElement
+     * @polymer
+     * @demo demo/index.html
+     */
+    class AdwordsMockup extends Polymer.Element {
+      static get is() {
+        return 'adwords-mockup';
+      }
+      static get properties() {
+        return {
+          headlineOne: {
+            type: String,
+            value: 'adwords-mockup'
+          },
+          headlineTwo: {
+            type: String,
+            value: 'adwords-mockup'
+          },
+          description: {
+            type: String,
+            value: 'adwords-mockup'
+          },
+          link: {
+            type: String,
+            value: 'http://adwords.google.com'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(AdwordsMockup.is, AdwordsMockup);
+  </script>
+</dom-module>
